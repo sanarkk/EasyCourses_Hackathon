@@ -6,8 +6,5 @@
 
 This website developed for University, and with this website students can choose courses which they want to learn.
 
-> Project running
-
-
 
 <sup>created by sanarkk, BenedictAg, ariguzcd, harrehmatsingh, and Toniodujinrin</sup>
