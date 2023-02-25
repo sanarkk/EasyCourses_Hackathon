@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import image from './img'
+import image from './img/books2.png'
 
 const Home = () => {
   return (
@@ -34,11 +34,20 @@ const Home = () => {
         <section class = "p-5 text-light text-center">
           <div class = "container">
             <div class = "d-sm-flex">
-              <div>
+              <img class = "img-fluid w-25 mr-5" src={image} alt = ""/>
+              <div class = "ml-5">
                 <h1 class = "mt-4">Choose Fast</h1>
                 <h1>Learn Faster</h1>
+                <br></br>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel leo commodo neque aliquet cursus a eu nunc. Phasellus ac elit eu nibh suscipit fringilla eu sed nibh. Nam congue, libero eu viverra consequat, odio ante posuere diam, sed malesuada sapien lorem in nibh.
+                </p>
+                <br></br>
+                <p>
+                  Don't know where to start? Ask our chatbot for directions.
+                </p>
+                <button class = "btn btn-primary">Help</button>
               </div>
-              <img src="img/books.png" alt = ""/>
             </div>
           </div>
         </section>
