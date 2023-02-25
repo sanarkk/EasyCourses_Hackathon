@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </nav>
 
-      <div>
+      <div class = "maindiv">
         <section class = "p-5 text-light text-right">
           <div class = "container">
             <div class = "d-sm-flex">
@@ -45,6 +45,7 @@ const Home = () => {
                 <p class = "paragraph-us text-right">
                   Don't know where to start? Ask our telgram chatbot for directions.
                 </p>
+                <br></br>
                 <button class = "btn btn-primary btn-lg">Help</button>
               </div>
             </div>
