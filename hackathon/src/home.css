@@ -1,4 +1,12 @@
 .homeHeader {
-    background-image:url("../imgs/bookBackground.jpeg");
+    background: seashell;
+    width: 100%;
+    height: 500px;
     z-index: 0;
+    background-repeat:no-repeat;
 }
+
+headerFont {
+    color:black
+}
+
