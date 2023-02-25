@@ -7,7 +7,7 @@ def sql_start():
     cur = base.cursor()
     if base:
         print('Data base connected OK!')
-    base.execute('CREATE TABLE IF NOT EXISTS students(name TEXT, student_id TEXT)')
+    base.execute('CREATE TABLE IF NOT EXISTS students(name TEXT, phone_number TEXT)')
     base.commit()
 
 
