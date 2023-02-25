@@ -1,9 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import image from './img/books2.png'
 
 const Home = () => {
   return (
-    <div>
+    <div class = "bg-dark" style = {{height:"100vh"}}>
       <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Easycourses</a>
@@ -22,18 +23,32 @@ const Home = () => {
                 <Link class="nav-link" to="/profile">Profile</Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" href="/aboutus">About us</Link>
+                <Link class="nav-link" to="/aboutus">About us</Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <div class = "bg-dark">
+      <div>
         <section class = "p-5 text-light text-center">
           <div class = "container">
-              <h1 class = "my-4">Choose fast, learn faster</h1>
-              <p></p>
+            <div class = "d-sm-flex">
+              <img class = "img-fluid w-50 mr-5" src={image} alt = ""/>
+              <div class = "ml-5">
+                <h1 class = "mt-4">Choose Fast</h1>
+                <h1>Learn Faster</h1>
+                <br></br>
+                <p>
+                  Registering for your courses has never been easier. Easycourses was designed for students by students. Our goal is to make registering for courses easier, so that students can foucs on studying the course over wasting time figuring out how to register for the course.
+                </p>
+                <br></br>
+                <p>
+                  Don't know where to start? Ask our chatbot for directions.
+                </p>
+                <button class = "btn btn-primary">Help</button>
+              </div>
+            </div>
           </div>
         </section>
       </div>
