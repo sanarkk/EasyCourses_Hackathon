@@ -15,7 +15,7 @@ const Login = () => {
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
-                      <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                      <h1 class="h4 text-gray-900 mb-4">Login</h1>
                     </div>
                     <form
                       class="user"
@@ -30,6 +30,7 @@ const Login = () => {
                           aria-describedby="emailHelp"
                           placeholder="Enter Email Address..."
                           name="login"
+                          required autocomplete="off"
                         />
                       </div>
                       <div class="form-group">
@@ -39,6 +40,7 @@ const Login = () => {
                           id="exampleInputPassword"
                           name="password"
                           placeholder="Password"
+                          required autocomplete="off"
                         />
                       </div>
                       <div class="form-group">
@@ -59,26 +61,15 @@ const Login = () => {
                         class="btn btn-primary btn-user btn-block"
                       />
                       <hr />
-                      <a
-                        href="index.html"
-                        class="btn btn-google btn-user btn-block"
-                      >
-                        <i class="fab fa-google fa-fw"></i> Login with Google
-                      </a>
-                      <a
-                        href="index.html"
-                        class="btn btn-facebook btn-user btn-block"
-                      >
-                        <i class="fab fa-facebook-f fa-fw"></i> Login with
-                        Facebook
-                      </a>
                     </form>
+
                     <hr />
 
                     <div class="text-center">
                       <Link class="small" to="/register"
                         >Create an Account!
                         </Link>
+
                     </div>
                   </div>
                 </div>
