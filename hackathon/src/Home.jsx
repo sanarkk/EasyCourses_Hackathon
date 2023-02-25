@@ -11,7 +11,7 @@ const Home = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <Link class="nav-link" aria-current="page" to="/">Main</Link>
               </li>
@@ -31,7 +31,9 @@ const Home = () => {
 
       <section class = "p-5 text-light text-center">
         <div class = "container">
-          
+          <div>
+            <h1>Test</h1>
+          </div>
         </div>
       </section>
 
