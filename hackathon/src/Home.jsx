@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </nav>
 
-      <div class = "homeHeader">
+      <div class = "bg-dark">
         <section class = "p-5 text-light text-center">
           <div class = "container">
               <h1 class = "my-4">Choose fast, learn faster</h1>
