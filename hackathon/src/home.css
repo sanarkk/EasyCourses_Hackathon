@@ -1,4 +1,8 @@
 .homeHeader {
-    background-image:url("../imgs/bookBackground.jpeg");
-    z-index: 0;
+
 }
+
+headerFont {
+    color:black
+}
+
