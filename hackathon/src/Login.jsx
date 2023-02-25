@@ -11,7 +11,9 @@ const Login = () => {
           <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
               <div class="row">
-                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                    
+                </div>
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
@@ -62,9 +64,6 @@ const Login = () => {
                       />
                       <hr />
                     </form>
-
-                    <hr />
-
                     <div class="text-center">
                       <Link class="small" to="/register"
                         >Create an Account!
