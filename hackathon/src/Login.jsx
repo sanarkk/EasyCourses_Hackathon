@@ -29,6 +29,7 @@ const Login = () => {
                           aria-describedby="emailHelp"
                           placeholder="Enter Email Address..."
                           name="login"
+                          required autocomplete="off"
                         />
                       </div>
                       <div class="form-group">
@@ -38,6 +39,7 @@ const Login = () => {
                           id="exampleInputPassword"
                           name="password"
                           placeholder="Password"
+                          required autocomplete="off"
                         />
                       </div>
                       <div class="form-group">
