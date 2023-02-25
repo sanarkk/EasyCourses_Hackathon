@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 
 const Login = () => {
@@ -61,10 +62,14 @@ const Login = () => {
                       />
                       <hr />
                     </form>
+
+                    <hr />
+
                     <div class="text-center">
-                      <a class="small" href="{% url 'account_signup' %}"
-                        >Create an Account!</a
-                      >
+                      <Link class="small" to="/register"
+                        >Create an Account!
+                        </Link>
+
                     </div>
                   </div>
                 </div>
