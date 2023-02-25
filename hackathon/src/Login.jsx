@@ -12,9 +12,6 @@ const Login = () => {
             <div class="card-body p-0">
               <div class="row">
                 <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                    <div class = "imgtxt">
-                      Your future starts here
-                    </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="p-5">
