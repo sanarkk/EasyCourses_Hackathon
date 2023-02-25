@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Profile = () => {
     return (
-        <div>
+        <div class="bg-dark" style={{height: "100vh"}}>
                     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="/">Easycourses</a>
@@ -71,24 +71,12 @@ const Profile = () => {
                     </ul>
                 </div>
                 </div>
-                <div class="col-md-2">
-                <a
-                    class="dropdown-item"
-                    href=""
-                >
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Update Profile
-                </a>
-                </div>
+
             </div>
             <div class="row">
                 <div class="col-md-4">
                 <div class="profile-work">
-                    <p>WORK LINK</p>
-                    <a href="">link 1</a><br />
-                    <a href="">link 2</a><br />
-                    <a href="">link 3</a>
-                    <p>SKILLS</p>
+                    <p>Courses</p>
                     <a href="">skill 1</a><br />
                     <a href="">skill 2</a><br />
                     <a href="">skill 3</a><br />
@@ -130,10 +118,10 @@ const Profile = () => {
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                        <label>Phone</label>
+                        <label>Student id</label>
                         </div>
                         <div class="col-md-6">
-                        <p>slogan</p>
+                        <p>student id</p>
                         </div>
                     </div>
                     </div>
