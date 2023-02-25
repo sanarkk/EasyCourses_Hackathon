@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div>
+    <div class = "background">
       <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-10 col-lg-12 col-md-9">
@@ -12,7 +12,9 @@ const Login = () => {
             <div class="card-body p-0">
               <div class="row">
                 <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                    
+                    <div class = "imgtxt">
+                      Your future starts here
+                    </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="p-5">
