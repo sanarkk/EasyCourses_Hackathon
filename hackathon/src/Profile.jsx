@@ -4,7 +4,7 @@ import NavBar from "./components/navBar";
 
 const Profile = () => {
   return (
-    <div class="bg-dark" style={{ height: "100%" }}>
+    <div class="bg-dark" style={{minHeight: "100vh", height: "100%" }}>
       <NavBar />
       <div class="container emp-profile">
         <br />
