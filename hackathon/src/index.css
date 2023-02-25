@@ -12,8 +12,8 @@ code {
     monospace;
 }
 
-.background-div {
-  background-color: seashell;
-  height: 100vh;
+
+.whiteText {
+  color: white;
 }
 
