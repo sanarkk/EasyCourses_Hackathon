@@ -13,10 +13,9 @@ const Profile = () => {
           <div class="col-md-4">
             <div class="profile-img">
               <td>
-                <img style={{ borderRadius: "10%" }} src="" />
-              </td>
-              <td>
-                <img src="" />
+                <div className="prof-img-div" style={{ borderRadius: "50%" }}>
+                  
+                </div>
               </td>
             </div>
           </div>
