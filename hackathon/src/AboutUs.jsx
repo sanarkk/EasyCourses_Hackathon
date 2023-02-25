@@ -41,6 +41,8 @@ const AboutUs = () => {
             <img src={image} className="img-us"></img>
         </div> 
 
+
+
     </div>
 
   );
