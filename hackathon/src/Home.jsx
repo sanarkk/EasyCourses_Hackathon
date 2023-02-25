@@ -30,23 +30,23 @@ const Home = () => {
         </div>
       </nav>
 
-      <div>
-        <section class = "p-5 text-light text-center">
+      <div class = "maindiv">
+        <section class = "p-5 text-light text-right">
           <div class = "container">
             <div class = "d-sm-flex">
               <img class = "img-fluid w-50 mr-5" src={image} alt = ""/>
               <div class = "ml-5">
-                <h1 class = "mt-4">Choose Fast</h1>
-                <h1>Learn Faster</h1>
+                <h1 class = "mt-4">Choose Fast, Learn Faster</h1>
                 <br></br>
-                <p>
+                <p class = "paragraph-us text-right">
                   Registering for your courses has never been easier. Easycourses was designed for students by students. Our goal is to make registering for courses easier, so that students can foucs on studying the course over wasting time figuring out how to register for the course.
                 </p>
                 <br></br>
-                <p>
-                  Don't know where to start? Ask our chatbot for directions.
+                <p class = "paragraph-us text-right">
+                  Don't know where to start? Ask our telgram chatbot for directions.
                 </p>
-                <button class = "btn btn-primary">Help</button>
+                <br></br>
+                <button class = "btn btn-primary btn-lg">Help</button>
               </div>
             </div>
           </div>

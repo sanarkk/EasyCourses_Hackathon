@@ -163,6 +163,11 @@ body.sidebar-toggled footer.sticky-footer {
   position: absolute;
 }
 
+.maindiv {
+  animation: 2s 1 alternate fadeIn;
+  margin-top: 5%;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
