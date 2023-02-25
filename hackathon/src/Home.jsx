@@ -29,13 +29,14 @@ const Home = () => {
         </div>
       </nav>
 
-      <section class = "p-5 text-light text-center">
-        <div class = "container">
-          <div>
-            <h1>Test</h1>
+      <div class = "bg-dark">
+        <section class = "p-5 text-light text-center">
+          <div class = "container">
+              <h1 class = "my-4">Choose fast, learn faster</h1>
+              <p></p>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </div>
   );

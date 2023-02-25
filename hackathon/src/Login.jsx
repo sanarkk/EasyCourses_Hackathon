@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div class = "background">
+    <div class = "bg-dark" style = {{height: "100vh"}}>
       <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-10 col-lg-12 col-md-9">
