@@ -45,7 +45,7 @@ const Home = () => {
                 <p class = "paragraph-us text-right">
                   Don't know where to start? Ask our telgram chatbot for directions.
                 </p>
-                <a class = "btn btn-primary" href="http://t.me/guide_hlp_stud_bot">Help</a>
+                <a target={"_blank"} class = "btn btn-primary" href="http://t.me/guide_hlp_stud_bot">Help</a>
               </div>
             </div>
           </div>
