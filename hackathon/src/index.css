@@ -168,6 +168,11 @@ body.sidebar-toggled footer.sticky-footer {
   margin-top: 5%;
 }
 
+.emp-profile {
+  animation: 2s 1 alternate fadeIn;
+
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
