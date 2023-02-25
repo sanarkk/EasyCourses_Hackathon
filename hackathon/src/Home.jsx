@@ -26,6 +26,13 @@ const Home = () => {
           </div>
         </div>
       </nav>
+
+      <section class = "p-5 text-light text-center">
+        <div class = "container">
+          
+        </div>
+      </section>
+
     </div>
   );
 };
