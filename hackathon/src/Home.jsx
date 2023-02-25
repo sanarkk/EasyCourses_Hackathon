@@ -4,7 +4,7 @@ import image from './img/books2.png'
 
 const Home = () => {
   return (
-    <div>
+    <div class = "bg-dark" style = {{height:"100vh"}}>
       <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Easycourses</a>
@@ -30,17 +30,17 @@ const Home = () => {
         </div>
       </nav>
 
-      <div class = "bg-dark">
+      <div>
         <section class = "p-5 text-light text-center">
           <div class = "container">
             <div class = "d-sm-flex">
-              <img class = "img-fluid w-25 mr-5" src={image} alt = ""/>
+              <img class = "img-fluid w-50 mr-5" src={image} alt = ""/>
               <div class = "ml-5">
                 <h1 class = "mt-4">Choose Fast</h1>
                 <h1>Learn Faster</h1>
                 <br></br>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel leo commodo neque aliquet cursus a eu nunc. Phasellus ac elit eu nibh suscipit fringilla eu sed nibh. Nam congue, libero eu viverra consequat, odio ante posuere diam, sed malesuada sapien lorem in nibh.
+                  Registering for your courses has never been easier. Easycourses was designed for students by students. Our goal is to make registering for courses easier, so that students can foucs on studying the course over wasting time figuring out how to register for the course.
                 </p>
                 <br></br>
                 <p>
