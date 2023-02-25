@@ -81,7 +81,7 @@ const Register = () => {
   console.log(errors);
 
   return (
-    <div className="background pt-5">
+    <div className="bg-dark pt-5" style = {{height: "100vh"}}>
       <div className="container">
         <div className="card o-hidden border-0 shadow-lg ">
           <div className="card-body p-0">
