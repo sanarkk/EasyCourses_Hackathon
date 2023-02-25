@@ -29,6 +29,28 @@ const CoursesPage = () => {
             </div>
           </div>
         </nav>
+
+        <div class="bg-cd">
+            <div class="row row-cols-1 row-cols-md-4 g-4" style={{marginLeft: "200px"}}>
+            <div class="col" style={{right: "90px"}}>
+              <div class="card" style={{width: "20rem"}}>
+                <img
+                  class="card-img-top"
+                  style={{width: "319px", height: "340px"}}
+                  src=""
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">course name</h5>
+                  <p class="card-text">Credits: credits</p>
+                  <p class="card-text">Price: price</p>
+                  <Link to="#" class="btn btn-primary">Add course</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     )
 };
