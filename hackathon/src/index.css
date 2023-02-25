@@ -168,6 +168,20 @@ body.sidebar-toggled footer.sticky-footer {
   margin-top: 5%;
 }
 
+.emp-profile {
+  animation: 2s 1 alternate fadeIn;
+
+}
+
+.prof-img-div {
+  background-color: #0062cc;
+  height: 40vh;
+  width: 40vh;
+  position: relative;
+  left: 80px;
+  margin-bottom: 50px ;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
