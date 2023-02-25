@@ -1,5 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import comp1010Image from './img/comp1010.jpeg'
+import comp1020Image from './img/comp1020.jpeg'
+import comp2080Image from './img/comp2080.jpeg'
+import comp2140Image from './img/comp2140.png'
+import comp2150Image from './img/comp2150.png'
+import comp2160Image from './img/comp2160.jpeg'
 
 
 const CoursesPage = () => {
@@ -33,176 +39,107 @@ const CoursesPage = () => {
         <div class="bg-cd bg-dark">
             <div class="row row-cols-4 row-cols-md-4 g-4 mb-5" style={{marginLeft: "200px"}}>
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
+              <div class="card" style={{width: "20rem", height:"32rem"}}>
                   <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp1010Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
+                    <h5 class="card-title">COMP 1010</h5>
+                    <h5 class="card-title">Intro Computer Science 1</h5>
                     <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
+              <div class="card" style={{width: "20rem", height:"32rem"}}>
                   <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp1020Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
+                    <h5 class="card-title">COMP 1020</h5>
+                    <h5 class="card-title">Intro Computer Science 2</h5>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
+                <div class="card" style={{width: "20rem", height:"32rem"}}>
+                <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp2080Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
+                    <h5 class="card-title">COMP 2080</h5>
+                    <h5 class="card-title">Analysis of Algorithms</h5>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
+                <div class="card" style={{width: "20rem", height:"32rem"}}>
+                <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp2140Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
+                    <h5 class="card-title">COMP 2140</h5>
+                    <h5 class="card-title">Data Structures and Algorithms</h5>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
+                <div class="card" style={{width: "20rem", height:"32rem"}}>
+                <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp2150Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
+                    <h5 class="card-title">COMP 2150</h5>
+                    <h5 class="card-title">Object Orientation</h5>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
               <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
+                <div class="card" style={{width: "20rem", height:"32rem"}}>
+                <img
                     class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
+                    style={{width: "100%", height: "320px"}}
+                    src={comp2160Image}
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
+                    <h5 class="card-title">COMP 2160</h5>
+                    <h5 class="card-title">Programming Practices</h5>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
               </div>
 
-              <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
-                    class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
-                    <Link to="#" class="btn btn-primary">Add course</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
-                    class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
-                    <Link to="#" class="btn btn-primary">Add course</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
-                    class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
-                    <Link to="#" class="btn btn-primary">Add course</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col" style={{right: "90px"}}>
-                <div class="card" style={{width: "20rem"}}>
-                  <img
-                    class="card-img-top"
-                    style={{width: "319px", height: "340px"}}
-                    src=""
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">course name</h5>
-                    <p class="card-text">Credits: credits</p>
-                    <p class="card-text">Price: price</p>
-                    <Link to="#" class="btn btn-primary">Add course</Link>
-                  </div>
-                </div>
-              </div>
-
-        
             </div>
           </div>
         </div>
