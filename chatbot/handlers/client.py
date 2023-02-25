@@ -2,17 +2,20 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardRemove
-
+import time
 from chatbot.bot_create import bot
 
 from chatbot.keyboards.client_kb import kb_client
 
 from chatbot.data_base import sqlite_db
 
+from datetime import datetime
+
 
 class FSMUser(StatesGroup):
     name = State()
     phone_number = State()
+    date = State()
 
 
 async def state_start(message: types.Message):
@@ -34,8 +37,9 @@ async def loadd_name(message: types.Message, state: FSMContext):
 async def loadd_number(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data["phone_number"] = message.text
+        data["date"] = datetime.now()
     await sqlite_db.sql_add_command(state)
-
+    await sqlite_db.auto_delete()
     await state.finish()
 
     await message.answer(
