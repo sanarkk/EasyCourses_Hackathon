@@ -12,4 +12,6 @@ code {
     monospace;
 }
 
-
+.whiteText {
+  color: white;
+}
