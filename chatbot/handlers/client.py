@@ -66,7 +66,10 @@ async def process_number_invalid(message: types.Message):
 
 async def about_course_help(message: types.Message):
     await message.answer(
-        "Step 1: \nStep2: ",
+        "Step 1: Open our website, and log in into your account. Register if you don't have. \n\n\nStep2: Open courses "
+        "page. \n\n\nStep3: Pick courses which you like the most, and click the button 'Add course'\n\n\nStep4: Open "
+        "Profile "
+        "page, there you will see your courses.",
         reply_markup=kb_client,
         parse_mode="HTML",
     )

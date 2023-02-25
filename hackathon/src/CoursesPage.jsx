@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const CoursesPage = () => {
     return (
-        <div class="background-div">
+        <div class="bg-dark" style={{height: "100vh"}}>
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="/">Easycourses</a>
@@ -30,7 +30,7 @@ const CoursesPage = () => {
           </div>
         </nav>
 
-        <div class="bg-cd">
+        <div class="bg-cd bg-dark">
             <div class="row row-cols-1 row-cols-md-4 g-4" style={{marginLeft: "200px"}}>
             <div class="col" style={{right: "90px"}}>
               <div class="card" style={{width: "20rem"}}>
