@@ -36,7 +36,7 @@ const CoursesPage = () => {
           </div>
         </nav>
 
-        <div class="bg-cd bg-dark">
+        <div class="bg-cd bg-dark crs-div">
             <div class="row row-cols-4 row-cols-md-4 g-4 mb-5" style={{marginLeft: "200px"}}>
               <div class="col" style={{right: "90px"}}>
               <div class="card" style={{width: "20rem", height:"32rem"}}>
