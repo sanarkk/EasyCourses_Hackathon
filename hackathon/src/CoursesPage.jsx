@@ -49,7 +49,7 @@ const CoursesPage = () => {
                   <div class="card-body">
                     <h5 class="card-title">COMP 1010</h5>
                     <h5 class="card-title">Intro Computer Science 1</h5>
-                    <p class="card-text">Credits: credits</p>
+                    <p class="card-text">Credits: 3</p>
                     <Link to="#" class="btn btn-primary">Add course</Link>
                   </div>
                 </div>
