@@ -1,6 +1,12 @@
 # hackathon-2023
 
-*This website was created by using SSR technologies.*
+*This website was created in 12 hours.*
+
+> Technologies
+
+Frontend - React, Bootstrap
+Backend - Node.js, MongoDB
+Chatbot - Python, SQLite, aiogram
 
 > About
 
