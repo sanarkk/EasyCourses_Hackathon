@@ -5,18 +5,21 @@ import Login from "./Login";
 import Profile from "./Profile";
 import Register from "./Register";
 import AboutUs from "./AboutUs";
+import CourseContextProvider from "./courseContext";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-      </Routes>
+      <CourseContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+        </Routes>
+      </CourseContextProvider>
     </div>
   );
 }

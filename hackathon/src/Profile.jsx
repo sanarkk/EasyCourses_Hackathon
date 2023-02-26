@@ -4,8 +4,12 @@ import NavBar from "./components/navBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CourseContext } from "./courseContext";
 
 const Profile = () => {
+  const { courses } = useContext(CourseContext);
+  console.log(courses);
   const navigate = useNavigate("");
   const [userId, setUserId] = useState("");
   useEffect(() => {
@@ -50,51 +54,50 @@ const Profile = () => {
     }
   }, [userId]);
   return (
-
-    <div class="bg-dark" style={{minHeight: "100vh", height: "100%" }}>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          Easycourses
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link" aria-current="page" to="/">
-                Main
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/courses">
-                Courses
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link active" to="/profile">
-                Profile
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/aboutus">
-                About us
-              </Link>
-            </li>
-          </ul>
+    <div class="bg-dark" style={{ minHeight: "100vh", height: "100%" }}>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            Easycourses
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <Link class="nav-link" aria-current="page" to="/">
+                  Main
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link" to="/courses">
+                  Courses
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link active" to="/profile">
+                  Profile
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link" to="/aboutus">
+                  About us
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>      <div class="container emp-profile">
-
+      </nav>{" "}
+      <div class="container emp-profile">
         <br />
         <br />
         <div class="row">
@@ -148,16 +151,12 @@ const Profile = () => {
           <div class="col-md-4">
             <div class="profile-work">
               <p>Courses</p>
-              <a href="">skill 1</a>
-              <br />
-              <a href="">skill 2</a>
-              <br />
-              <a href="">skill 3</a>
-              <br />
-              <a href="">skill 4</a>
-              <br />
-              <a href="">skill 5</a>
-              <br />
+              {courses.map((course) => (
+                <div>
+                  <a href="">{course}</a>
+                  <br />
+                </div>
+              ))}
             </div>
           </div>
           <div class="col-md-8">
