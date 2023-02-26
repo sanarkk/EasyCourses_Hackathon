@@ -170,7 +170,10 @@ body.sidebar-toggled footer.sticky-footer {
 
 .emp-profile {
   animation: 2s 1 alternate fadeIn;
+}
 
+.crs-div {
+  animation: 2s 1 alternate fadeIn;
 }
 
 .prof-img-div {
