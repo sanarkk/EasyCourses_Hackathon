@@ -4,8 +4,10 @@ import { useState } from "react";
 import Joi from "joi";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const Schema = Joi.object({
     studentId: Joi.string(),
 
@@ -59,7 +61,8 @@ const Login = () => {
           payload
         );
         if (data) {
-          console.log(data);
+          window.localStorage.setItem("user", JSON.stringify({ data: data }));
+          navigate("/profile");
         }
       } catch (error) {
         toast.error("An error occured try again");

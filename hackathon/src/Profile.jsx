@@ -3,13 +3,33 @@ import { Link } from "react-router-dom";
 import NavBar from "./components/navBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
-  const [user, setUser] = useState("");
+  const navigate = useNavigate("");
+  const [userId, setUserId] = useState("");
+  useEffect(() => {
+    let _userId = JSON.parse(localStorage.getItem("user"));
+    _userId = _userId ? (_userId.data ? _userId.data._id : false) : false;
+    if (_userId) {
+      console.log(_userId);
+      setUserId(_userId);
+    } else {
+      navigate("/login");
+    }
+  });
+
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    _id: "",
+    faculty: "",
+  });
   useEffect(() => {
     const getUserData = async () => {
       const { data } = await axios.get(
-        "https://hackathon-backend-six.vercel.app/users?id=122344"
+        `https://hackathon-backend-six.vercel.app/users?id=${userId}`
       );
       if (data) {
         setUser(data.data);
@@ -28,7 +48,7 @@ const Profile = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [userId]);
   return (
 
     <div class="bg-dark" style={{minHeight: "100vh", height: "100%" }}>
