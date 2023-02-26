@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Joi from "joi";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
+
 const Register = () => {
+  const navigate = useNavigate();
   const Schema = Joi.object({
     email: Joi.string()
       .min(3)
@@ -14,6 +19,7 @@ const Register = () => {
     firstName: Joi.string().required().label("First Name"),
     studentId: Joi.string().required().label("Student Id"),
     confirmPassword: Joi.string().required().label("Confirm Password"),
+    faculty: Joi.string().required().label("Faculty"),
   });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,15 +35,24 @@ const Register = () => {
     studentId: "",
     password: "",
     confirmPassword: "",
+    faculty: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errorsObject = Schema.validate(
-      { email, password, confirmPassword, firstName, lastName, studentId },
+      {
+        email,
+        password,
+        confirmPassword,
+        firstName,
+        lastName,
+        studentId,
+        faculty,
+      },
       { abortEarly: false }
     );
-    console.log(errorsObject);
+
     if (errorsObject.error) {
       const temporaryErrorObject = {
         email: "",
@@ -45,7 +60,8 @@ const Register = () => {
         confirmPassword: "",
         firstName: "",
         lastName: "",
-        studentId,
+        studentId: "",
+        faculty: "",
       };
       errorsObject.error.details.forEach((detail) => {
         if (
@@ -74,14 +90,48 @@ const Register = () => {
           temporaryErrorObject.confirmPassword = "";
         }
       });
-      console.log(temporaryErrorObject);
+
       setErrors(temporaryErrorObject);
+    } else {
+      const payload = {
+        id: studentId,
+        firstName: firstName,
+        lastName: lastName,
+        faculty: faculty,
+        email: email,
+        password: password,
+      };
+
+      try {
+        const data = await axios.post(
+          "https://hackathon-backend-six.vercel.app/users",
+          payload
+        );
+        if (data.status === 200) {
+          const newPayLoad = {
+            id: studentId,
+            password: password,
+          };
+          const res = await axios.post(
+            "https://hackathon-backend-six.vercel.app/authenticate",
+            newPayLoad
+          );
+          if (res) {
+            window.localStorage.setItem(JSON.parse(res));
+            navigate("/profile");
+          } else {
+            toast("an error occured try again");
+          }
+        }
+      } catch (error) {
+        toast("An error occured , tryu again later");
+      }
     }
   };
-  console.log(errors);
 
   return (
-    <div className="bg-dark pt-5" style = {{height: "100vh"}}>
+    <div className="bg-dark pt-5" style={{ height: "100vh" }}>
+      <ToastContainer />
       <div className="container">
         <div className="card o-hidden border-0 shadow-lg ">
           <div className="card-body p-0">
@@ -158,6 +208,20 @@ const Register = () => {
                         }}
                       />
                       <small className="text-danger">{errors.studentId}</small>
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="faculty"
+                        className="form-control form-control-user"
+                        id="exampleInputEmail"
+                        placeholder="Students Faculty"
+                        value={faculty}
+                        onChange={(e) => {
+                          setFaculty(e.currentTarget.value);
+                        }}
+                      />
+                      <small className="text-danger">{errors.faculty}</small>
                     </div>
                     <div className="form-group row">
                       <div className="col-sm-6 mb-3 mb-sm-0">

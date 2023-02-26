@@ -1,9 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./components/navBar";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Profile = () => {
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    const getUserData = async () => {
+      const { data } = await axios.get(
+        "https://hackathon-backend-six.vercel.app/users?id=122344"
+      );
+      if (data) {
+        setUser(data.data);
+      } else {
+        setUser({
+          firstName: "",
+          lastName: "",
+          email: "",
+          _id: "",
+          faculty: "",
+        });
+      }
+    };
+    try {
+      getUserData();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
   return (
+
     <div class="bg-dark" style={{minHeight: "100vh", height: "100%" }}>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
       <div class="container-fluid">
@@ -47,22 +74,35 @@ const Profile = () => {
         </div>
       </div>
     </nav>      <div class="container emp-profile">
+
         <br />
         <br />
         <div class="row">
           <div class="col-md-4">
             <div class="profile-img">
               <td>
-                <div className="prof-img-div" style={{ borderRadius: "50%" }}>
-                  
+                <div
+                  className="prof-img-div  text-white"
+                  style={{
+                    borderRadius: "50%",
+                    fontSize: "120px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {user.firstName.length > 0 && user.firstName[0]}
                 </div>
               </td>
             </div>
           </div>
           <div class="col-md-6">
             <div class="profile-head">
-              <h5>First name last name</h5>
-              <h6>SOME TEXT FOR FUTURE</h6>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <h5 className=" mr-4">{user.firstName}</h5>
+                <h5>{user.lastName}</h5>
+              </div>
+              <h6>{user.faculty}</h6>
               <br />
               <br />
               <br />
@@ -113,7 +153,7 @@ const Profile = () => {
                     <label>First name</label>
                   </div>
                   <div class="col-md-6">
-                    <p>first name</p>
+                    <p>{user.firstName}</p>
                   </div>
                 </div>
                 <div class="row">
@@ -121,7 +161,7 @@ const Profile = () => {
                     <label>Last name</label>
                   </div>
                   <div class="col-md-6">
-                    <p>last name</p>
+                    <p>{user.lastName}</p>
                   </div>
                 </div>
                 <div class="row">
@@ -129,7 +169,7 @@ const Profile = () => {
                     <label>Email</label>
                   </div>
                   <div class="col-md-6">
-                    <p>email</p>
+                    <p>{user.email}</p>
                   </div>
                 </div>
                 <div class="row">
@@ -137,7 +177,7 @@ const Profile = () => {
                     <label>Student id</label>
                   </div>
                   <div class="col-md-6">
-                    <p>student id</p>
+                    <p>{user._id}</p>
                   </div>
                 </div>
               </div>

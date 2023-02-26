@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Joi from "joi";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const Schema = Joi.object({
@@ -15,42 +17,59 @@ const Login = () => {
     password: "",
     studentId: "",
   });
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errorsObject = Schema.validate(
       { studentId, password },
       { abortEarly: false }
     );
-    const temporaryErrorObject = {
-      studentId: "",
-      password: "",
-    };
-    errorsObject.error?.details.forEach((detail) => {
-      if (
-        Object.keys(temporaryErrorObject).includes(detail.path[0].toString())
-      ) {
-        const path = detail.path[0].toString();
-        temporaryErrorObject[path] = detail.message;
-      }
-    });
-    let errorsArray = [];
-    errorsObject.error?.details.forEach((error) =>
-      errorsArray.push(error.path[0].toString())
-    );
-    Object.keys(temporaryErrorObject).forEach((error) => {
-      if (!errorsArray.includes(error)) {
-        temporaryErrorObject[error] = "";
-      }
-    });
+    if (errorsObject.error) {
+      const temporaryErrorObject = {
+        studentId: "",
+        password: "",
+      };
+      errorsObject.error?.details.forEach((detail) => {
+        if (
+          Object.keys(temporaryErrorObject).includes(detail.path[0].toString())
+        ) {
+          const path = detail.path[0].toString();
+          temporaryErrorObject[path] = detail.message;
+        }
+      });
+      let errorsArray = [];
+      errorsObject.error?.details.forEach((error) =>
+        errorsArray.push(error.path[0].toString())
+      );
+      Object.keys(temporaryErrorObject).forEach((error) => {
+        if (!errorsArray.includes(error)) {
+          temporaryErrorObject[error] = "";
+        }
+      });
 
-    setErrors(temporaryErrorObject);
+      setErrors(temporaryErrorObject);
+    } else {
+      const payload = {
+        id: studentId,
+
+        password: password,
+      };
+      try {
+        const { data } = await axios.post(
+          "https://hackathon-backend-six.vercel.app/authenticate",
+          payload
+        );
+        if (data) {
+          console.log(data);
+        }
+      } catch (error) {
+        toast.error("An error occured try again");
+      }
+    }
   };
 
   return (
-
-    <div class = "bg-dark" style = {{height: "100vh"}}>
-
-
+    <div class="bg-dark" style={{ height: "100vh" }}>
+      <ToastContainer />
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-10 col-lg-12 col-md-9">
