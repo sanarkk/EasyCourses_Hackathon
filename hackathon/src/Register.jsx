@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -116,15 +117,17 @@ const Register = () => {
             "https://hackathon-backend-six.vercel.app/authenticate",
             newPayLoad
           );
-          if (res) {
-            window.localStorage.setItem(JSON.parse(res));
+
+          if (res.status == 200) {
+            window.localStorage.setItem("user", JSON.stringify(res));
             navigate("/profile");
           } else {
-            toast("an error occured try again");
+            toast.error("an error occured try again");
           }
         }
       } catch (error) {
-        toast("An error occured , tryu again later");
+        console.log(error);
+        toast.error("An error occured , try again later");
       }
     }
   };
